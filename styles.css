@@ -1,0 +1,52 @@
+input,button{
+    
+    
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    width: 15rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+
+
+    
+}
+h1{
+    text-align: center;
+}
+body{
+    background-color: blueviolet;
+}
+#foot{
+    background-color: blueviolet;
+    margin: auto;
+    text-align: center;
+}
+.fa:hover {
+    opacity: 0.9;
+}
+
+.fa-linkedin {
+
+    color:white;
+    margin: auto;
+}
+
+.fa-github{
+    
+    color: white;
+    margin: auto;
+}
+
+.fa-instagram {
+    
+    color: white;
+}
+
+.fa {
+    padding: 13px;
+    font-size: 40px;
+    width: 60px;
+    text-decoration: none;
+    margin: auto;
+}
