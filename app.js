@@ -25,7 +25,7 @@ function clickEventHandler(){
 function profitCalculator(sellingPrice,costPrice){
      var profit= sellingPrice - costPrice;
      var profitPercentage = (profit/costPrice)*100;
-     message.innerText = 'Your profit is' + profit + 'by' + profitPercentage + '%';
+     message.innerText = 'Your profit is ' + profit + ' by ' + profitPercentage.toFixed(2) + '%';
 
     
     
