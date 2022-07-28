@@ -10,7 +10,7 @@ function clickEventHandler(){
     var i= initial.value;
     var sellingPrice=q*c;
     var costPrice = q*i;
-    if(initial & current & Quantity){
+    
         if(sellingPrice > costPrice){
             var r=  profitCalculator(sellingPrice,costPrice);
             console.log("profit",r);
@@ -19,16 +19,13 @@ function clickEventHandler(){
               var m = lossCalculator(sellingPrice,costPrice);
               console.log("loss",m);
           }
-    }
-    else{
-        alert('please fill all the feilds');
-    }
+    
     
 }
 function profitCalculator(sellingPrice,costPrice){
      var profit= sellingPrice - costPrice;
      var profitPercentage = (profit/costPrice)*100;
-     message.innerText = 'Your profit is' + profit + 'by' + profitPercentage;
+     message.innerText = 'Your profit is' + profit + 'by' + profitPercentage + '%';
 
     
     
@@ -37,5 +34,5 @@ function lossCalculator(sellingPrice,costPrice){
     var loss = costPrice - sellingPrice;
     var lossPercentage = (loss/costPrice)*100;
     message.innerText = 'Your loss is ' + loss
-+ ' by ' + lossPercentage.toFixed(2); 
++ ' by ' + lossPercentage.toFixed(2) + '%'; 
 }

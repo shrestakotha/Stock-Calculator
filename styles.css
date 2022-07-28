@@ -25,7 +25,10 @@ body{
 .fa:hover {
     opacity: 0.9;
 }
-
+#message{
+    text-align: center;
+    font-size: large;
+}
 .fa-linkedin {
 
     color:white;
