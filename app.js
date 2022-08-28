@@ -19,6 +19,9 @@ function clickEventHandler(){
               var m = lossCalculator(sellingPrice,costPrice);
               console.log("loss",m);
           }
+          if(sellingPrice == costPrice){
+            message.innerText = "You have neither gained nor lost!!!"
+          }
     
     
 }
