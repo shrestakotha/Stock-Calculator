@@ -4,13 +4,19 @@ var Quantity = document.querySelector("#quantity");
 var check = document.querySelector("#checkbutton");
 var message = document.querySelector("#message");
 check.addEventListener('click', clickEventHandler);
+
 function clickEventHandler(){
     var q = Quantity.value;
     var c = current.value;
     var i= initial.value;
     var sellingPrice=q*c;
     var costPrice = q*i;
-    if(q&c&i){
+    
+       if(q && c && i){
+        if(i<0 || q<0 || c<0){
+            message.innerText ='enter positive inputs!!'
+        }
+        else{
         if(sellingPrice > costPrice){
             var r=  profitCalculator(sellingPrice,costPrice);
             console.log("profit",r);
@@ -21,13 +27,14 @@ function clickEventHandler(){
           }
           if(sellingPrice == costPrice){
             message.innerText = "You have neither gained nor lost!!!"
-          }
-    
-    
-}
-else{
-    message.innerText ="enter the required values!!"
-}}
+          }}
+        }
+        
+        else{
+            message.innerText ="enter the required values!!"
+        }
+    }
+
 function profitCalculator(sellingPrice,costPrice){
      var profit= sellingPrice - costPrice;
      var profitPercentage = (profit/costPrice)*100;
