@@ -10,7 +10,7 @@ function clickEventHandler(){
     var i= initial.value;
     var sellingPrice=q*c;
     var costPrice = q*i;
-    
+    if(q&c&i){
         if(sellingPrice > costPrice){
             var r=  profitCalculator(sellingPrice,costPrice);
             console.log("profit",r);
@@ -25,6 +25,9 @@ function clickEventHandler(){
     
     
 }
+else{
+    message.innerText ="enter the required values!!"
+}}
 function profitCalculator(sellingPrice,costPrice){
      var profit= sellingPrice - costPrice;
      var profitPercentage = (profit/costPrice)*100;
